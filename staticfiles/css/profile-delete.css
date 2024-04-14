@@ -1,0 +1,58 @@
+.delete-profile-line {
+    background-color: #e2e2e2;
+    height: 1px;
+}
+
+.delete-profile-container {
+    width: 850px;
+    margin: 6.55% auto 9%;
+    padding: 40px;
+    border-radius: 30px;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+}
+
+.delete-profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.delete-profile input {
+    width: 100%;
+    font-size: 14px;
+    padding: 5px 10px;
+    border-radius: 8px;
+    border-color: #5fc90d;
+}
+
+.delete-buttons {
+    width: 100%;
+    margin-top: 6.5%;
+    display: flex;
+}
+
+.delete-profile button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    background-color: #5fc90d;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.go-back {
+    margin: 0 10px;
+    padding: 8px 16px;
+    background-color: #5fc90d;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}

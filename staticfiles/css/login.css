@@ -1,0 +1,115 @@
+.login-line {
+    background-color: #e2e2e2;
+    height: 1px;
+}
+
+.login {
+    width: 400px;
+    margin: 2.5% auto 3%;
+    padding: 20px;
+    border-radius: 30px;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.login h1 {
+    text-align: left;
+    margin-left: 20px;
+    margin-bottom: 30px;
+    margin-top: 10px;
+    font-size: 50px;
+}
+
+.login label {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.login input {
+    width: 82%;
+    margin-left: 10px;
+    padding: 20px;
+    border: 2px solid black;
+    margin-bottom: 10px;
+}
+
+.login input[type="email"] {
+    margin-right: 10px;
+    margin-bottom: 30px;
+    border-radius: 15px;
+    font-size: 20px;
+}
+
+.login input[type="password"] {
+    margin-bottom: 20px;
+    border-radius: 15px;
+    font-size: 20px;
+}
+
+.login-options input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    /* margin-right: -70px; */
+    margin-top: 1px;
+    margin-left: 20px;
+}
+
+
+.login-options {
+    display: flex;
+    justify-content: space-between;
+    color: #000;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    font-size: 18px;
+}
+
+.remember-me {
+    display: flex;
+
+}
+
+.login-options a {
+    font-size: 16px;
+}
+
+.login button {
+    width: 35%;
+    padding: 10px 20px;
+    margin-left: 30%;
+    background-color: #5fc90d;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.remember-me p{
+    margin: 0 8px;
+}
+
+.forgot-password {
+    text-align: right;
+}
+
+.registration-link {
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+}
+
+.login a {
+    color: black;
+    text-decoration: underline;
+}
+
+.login a:visited {
+    color: black;
+}
+
+.login a:active {
+    color: black;
+}

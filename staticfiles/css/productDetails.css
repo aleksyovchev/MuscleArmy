@@ -1,0 +1,236 @@
+.product-details-line {
+    background-color: #e2e2e2;
+    height: 1px;
+}
+
+.product-details {
+    background-color: #fafafa;
+    height: auto;
+    position: relative;
+}
+
+.product-details .product-img {
+    width: 600px;
+    margin: 10%;
+    margin-left: 10%;
+    margin-top: 2%;
+    margin-bottom: 3%;
+}
+
+.details {
+    position: absolute;
+    top: 0%;
+    left: 45%;
+}
+
+.details h2 {
+    font-size: 50px;
+    margin-bottom: -5px;
+}
+
+.details p {
+    font-size: 26px;
+}
+
+.product-colors-variety img {
+    position: absolute;
+    width: 30px;
+    top: 33%;
+}
+
+.product-colors-variety span:nth-child(1) img {
+    left: 45%;
+}
+
+.product-colors-variety span:nth-child(2) img {
+    left: 47.5%;
+}
+
+.product-colors-variety span:nth-child(3) img {
+    left: 50%;
+}
+
+.product-price {
+    position: absolute;
+    font-size: 35px;
+    color: black;
+    font-weight: bold;
+    left: 45%;
+    top: 45%;
+}
+
+.product-old-price {
+    color: red;
+    text-decoration: line-through;
+    font-style: italic;
+    margin-left: 15px;
+    font-size: 25px;
+}
+
+.product-size-dropdown select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    position: absolute;
+    width: 23%;
+    padding: 20px 40px;
+    margin: 0 10px;
+    border-radius: 15px;
+    outline: none;
+    font-size: 24px;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%235fc90d%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E');
+    background-repeat: no-repeat, repeat;
+    background-position: right .7em top 50%, 0 0;
+    background-size: .65em auto, 100%;
+    left: 44.5%;
+    top: 60%;
+}
+
+.order-button {
+    position: absolute;
+    left: 45%;
+    top: 77%;
+    background-color: #ffffff;
+    color: black;
+    padding: 5px 10px;
+    border-radius: 15px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 30px;
+    width: 23%;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid #5fc90d;
+    cursor: pointer;
+}
+
+.order-button:hover {
+    background-color: #5fc90d;
+    color: #ffffff;
+}
+
+.product-like-button {
+    position: absolute;
+    left: 65%;
+    top: 10%;
+    fill: red;
+    cursor: pointer;
+}
+
+.carousel-container {
+    width: 27%;
+    margin-left: 12.2%;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 7.5%;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-slide {
+    flex: 0 0 33.33%;
+    margin-right: 5px;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: auto;
+}
+
+.carousel-btn-prev {
+    position: absolute;
+    top: 90%;
+    transform: rotate(180deg);
+    left: 10%;
+    cursor: pointer;
+}
+
+.carousel-btn-next {
+    position: absolute;
+    top: 90%;
+    right: 58.5%;
+    cursor: pointer;
+}
+
+.more-products-details {
+    justify-content: space-between;
+    display: flex;
+    width: 70%;
+}
+
+.more-products-details-container {
+    position: relative;
+    left: 20%;
+    padding: 30px;
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+}
+
+.more-products-details-image {
+    width: 100%;
+    max-height: 250px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.more-products-details-link {
+    text-decoration: none;
+    color: black
+}
+
+.more-products-details-title {
+    margin-top: 3%;
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.more-products-details-description {
+    font-size: 16px;
+    margin-bottom: 5%;
+}
+
+.more-products-details-prices {
+    display: flex;
+    flex-direction: column;
+  }
+
+.more-products-details-current-price {
+    position: relative;
+    font-size: 20px;
+    color: black;
+    font-weight: bold;
+    left: 70%;
+    margin-top: -22%;
+}
+
+.more-products-details-old-price {
+    position: relative;
+    left: 70%;
+    color: red;
+    text-decoration: line-through;
+    font-style: italic;
+    margin-left: 15px;
+    margin-top: 15px; /* Добавете малко отстояние между цените */
+}
+
+.more-see-more-button {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-left: 43.5%;
+    background-color: white;
+    padding: 20px 60px;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 25px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border: none;
+    cursor: pointer;
+}

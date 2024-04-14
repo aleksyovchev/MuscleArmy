@@ -1,0 +1,72 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block page_content %}
+
+    <div class="product-details-line"></div>
+
+        <div class="product-details">
+            <img class="product-img" src="{{ product.product_photo }}}" alt="Leggings">
+            <div class="details">
+                <h2>{{ product.name }}</h2>
+                <p>{{ product.description }}</p>
+            </div>
+            <div class="product-colors-variety">
+                <span><img src="{% static 'images/wear-variety-1.svg' %}" alt="Red"></span>
+                <span><img src="{% static 'images/wear-variety-2.svg' %}" alt="Blue"></span>
+                <span><img src="{% static 'images/wear-variety-3.svg' %}" alt="Pink"></span>
+            </div>
+            <div class="product-price">${{ product.price }}
+                {% if product.old_price != None %}
+                    <span class="product-old-price">${{ product.old_price }}</span></div>
+                {% endif %}
+            <div class="product-size-dropdown">
+                <select>
+                    <option value="" disabled selected hidden>Size</option>
+                    <option value="xs">{{ product.size }}</option>
+                </select>
+            </div>
+            <button class="order-button">Order now</button>
+            <img id="productLikeButton" class="product-like-button" src="{% static 'images/unfilled-heart.svg' %}" alt="Like">
+        </div>
+
+        <img src="{% static 'images/green-arrow-carousel.svg' %}" alt="Prevoius image" class="carousel-btn-prev" id="prevBtn">
+        <div class="carousel-container">
+            <div class="carousel-track">
+                <div class="carousel-slide">
+                    <img src="{% static 'images/Leggings-pair-1.svg' %}" alt="Image 1">
+                </div>
+                <div class="carousel-slide">
+                    <img src="{% static 'images/Leggings-pair-2.svg' %}" alt="Image 2">
+                </div>
+                <div class="carousel-slide">
+                    <img src="{% static 'images/Leggings-pair-3.svg' %}" alt="Image 3">
+                </div>
+            </div>
+        </div>
+        <img src="{% static 'images/green-arrow-carousel.svg' %}" alt="Next image" class="carousel-btn-next" id="nextBtn">
+
+
+        <div class="more-products-details">
+            {% for random_product in random_products %} }
+                <div class="more-products-details-container">
+                    <a href="{% url 'details product' product_slug=random_product.slug %}" class="more-products-details-link">
+                        <img src="{{ random_product.product_photo }}" alt="Product Image" class="more-products-details-image">
+                        <div class="more-products-details-title">{{ random_product.name }}</div>
+                    </a>
+                    <div class="more-products-details-description">{{ random_product.description }}</div>
+                    <div class="more-products-details-prices">
+                        <span class="more-products-details-current-price">${{ random_product.price }}</span>
+                        {% if random_product.old_price != None %}
+                            <span class="more-products-details-old-price">${{ random_product.old_price }}</span>
+                        {% endif %}
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        <button class="more-see-more-button">See more...</button>
+
+    <script src="{% static 'js/button-scroll-home-page.js' %}"></script>
+    <script src="{% static 'js/like-button.js' %}"></script>
+    <script src="{% static 'js/caroussel-slideshow.js' %}"></script>
+
+{% endblock %}

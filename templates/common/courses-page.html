@@ -1,0 +1,36 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block page_content %}
+
+        <div class="courses-line"></div>
+
+        <div class="courses-container">
+            <div class="courses-container-grid">
+                {% for course in courses %}
+                    <div class="course">
+                    <div class="course-img">
+                        <img src="{% static 'images/courses-image.jpg' %}" alt="Course">
+                    </div>
+                    <div class="workout-time">
+                        <div class="workout-calendar">
+                            <img src="{% static 'images/calendar.svg' %}" alt="Calendar">
+                            <p>{{ course.duration }} days</p>
+                        </div>
+                        <div class="workout-clock">
+                            <img src="{% static 'images/clock.svg' %}" alt="Clock">
+                            <p>{{ course.length_per_day }} min/day</p>
+                        </div>
+                    </div>
+                    <div class="course-title">
+                        <h1>{{ course.title }}</h1>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            
+        </div>
+{#        <div class="see-more-container">#}
+{#            <button class="courses-see-more-button">See more...</button>#}
+{#        </div>#}
+
+{% endblock %}

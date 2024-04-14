@@ -1,0 +1,22 @@
+{% extends 'base/base.html' %}
+{% block page_content %}
+
+    <div class="delete-article-line"></div>
+
+        <div class="delete-article-container">
+            <div class="delete-article">
+                <h1>Delete article</h1>
+                    <form method="post" action="{% url 'delete article' article_slug=article_slug %}">
+                        {{ form.as_p }}
+                        <div class="delete-buttons">
+                            <button>YES</button>
+                        <a href="{% url 'details article' article_slug=article_slug %}">
+                            <button>NO</button>
+                        </a>
+                        </div>
+                        {% csrf_token %}
+                    </form>
+            </div>
+        </div>
+
+{% endblock %}

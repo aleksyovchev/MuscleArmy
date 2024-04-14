@@ -1,0 +1,50 @@
+.add-article-line {
+    background-color: #e2e2e2;
+    height: 1px;
+}
+
+.article-add-container {
+    width: 500px;
+    margin: 0 auto;
+    padding: 40px;
+    margin-top: 2.5%;
+    margin-bottom: 3%;
+    border-radius: 30px;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.article-add {
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    flex-wrap: wrap;
+}
+
+.article-add label {
+    font-weight: bold;
+}
+
+.article-add input {
+    width: 100%;
+    font-size: 14px;
+    padding: 5px 10px;
+    border-radius: 8px;
+    border-color: #5fc90d;
+}
+
+.article-add-btn {
+    margin: 20px auto 0;
+    width: 50%;
+    padding: 10px 20px;
+    background-color: #5fc90d;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+

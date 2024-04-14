@@ -1,0 +1,110 @@
+.shop-line {
+    background-color: #e2e2e2;
+    height: 1px;
+}
+
+.shop {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 4% 0;
+}
+
+.black-circle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.shop p {
+    color: black;
+    font-weight: bold;
+    font-size: 38px;
+}
+
+.products-grid-wear,
+.products-grid-equipment,
+.products-grid-supplements {
+    display: flex;
+    grid-template-columns: repeat(3, 17.5%);
+    grid-column-gap: 10%;
+    grid-row-gap: 40px;
+    justify-content: center;
+    margin-bottom: 100px;
+}
+
+.product-container-wear,
+.product-container-equipment,
+.product-container-supplements {
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+}
+
+.product-image-wear,
+.product-image-equipment,
+.product-image-supplements {
+    width: 100%;
+    border-radius: 20px;
+}
+
+.product-title-wear,
+.product-title-equipment,
+.product-title-supplements {
+    padding: 10px 30px 5px;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.product-description-wear,
+.product-description-equipment,
+.product-description-supplements {
+    padding: 0px 30px 10px;
+    font-size: 16px;
+}
+
+.product-colors-wear,
+.product-colors-equipment,
+.product-colors-supplements {
+    padding: 10px 30px 10px;
+}
+
+.product-price-wear,
+.product-price-equipment,
+.product-price-supplements {
+    font-size: 20px;
+    color: black;
+    font-weight: bold;
+    padding: 10px 30px 20px;
+}
+
+.product-old-price-wear,
+.product-old-price-equipment,
+.product-old-price-supplements {
+    color: red;
+    text-decoration: line-through;
+    font-style: italic;
+    margin-left: 15px;
+}
+
+.product-details-link {
+    text-decoration: none;
+    color: black;
+}
+
+.shop-see-more-button {
+    display: block;
+    margin: 4% auto;
+    background-color: white;
+    padding: 10px 40px;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 25px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+    border: none;
+    cursor: pointer;
+    width: 15%;
+}
+
+a {
+    text-decoration: none;
+}

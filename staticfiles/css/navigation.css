@@ -1,0 +1,144 @@
+#top {
+    height: 144px;
+    z-index: 0;
+}
+
+.navbar {
+    background-color: #000000;
+    height: 144px;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+    top: 0;
+    position: fixed;
+    width: 100%;
+    box-sizing: border-box;
+    right: 0;
+}
+
+.overlay {
+    position: fixed;
+    top: 144px;
+    left: 0;
+    width: 350px;
+    height: auto;
+    background-color: #ffffff;
+    display: none;
+    z-index: 999;
+}
+
+.burger-menu {
+    cursor: pointer;
+}
+
+.submenu li {
+    color: black;
+    display: block;
+    margin: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.submenu li a {
+    text-decoration: none;
+    color: #000;
+}
+
+.submenu-shop {
+    display: none;
+}
+
+.submenu-shop li {
+    font-weight: normal;
+}
+
+#logo a{
+    display: flex;
+    align-items: center;
+    color: white;
+    width: auto;
+    font-size: 25px;
+}
+
+#logo h1 {
+    margin-left: 20px;
+    font-weight: 500;
+    letter-spacing: 0.15vw;
+}
+
+.navbar-right{
+    display: flex;
+    justify-content: space-between;
+    min-width: 100px;
+}
+
+
+.sub-navbar {
+    background-color: #fafafa;
+    height: 66px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    width: 100%;
+    left: 0;
+    right: 0;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.sub-nav {
+    list-style: none;
+    display: flex;
+    padding-left: 25vh;
+}
+
+.sub-nav li {
+    font-weight: bold;
+    font-size: 22px;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 10vh;
+}
+
+.sub-nav li a {
+    text-decoration: none;
+    color: #000;
+}
+
+.sub-nav li a:visited {
+    color: #000;
+}
+
+#search-input {
+    padding: 15px;
+    font-size: 14px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    outline: none;
+    margin-right: 40px;
+    width: 350px;
+    height: 10px;
+}
+
+.search img {
+    position: absolute;
+    margin-top: 21px;
+    right: 75px;
+    transform: translateY(-50%);
+}
+
+@media screen and (max-width: 840px) {
+    #logo h1 {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 840px) {
+    .sub-nav {
+        padding-left: 5vh;
+    }
+}

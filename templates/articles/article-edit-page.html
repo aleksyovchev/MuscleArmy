@@ -1,0 +1,16 @@
+{% extends 'base/base.html' %}
+{% block page_content %}
+
+        <div class="edit-article-line"></div>
+        <div class="article-edit-container">
+            <h1>Edit article</h1>
+                <form method="post" action="{% url 'edit article' article_slug=article_slug %}">
+                    {{ form.as_p }}
+                    <div class="article-edit-btn-container">
+                        <button class="article-edit-btn" type="submit">Edit</button>
+                    </div>
+                    {% csrf_token %}
+                </form>
+        </div>
+
+{% endblock %}

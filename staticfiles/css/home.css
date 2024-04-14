@@ -1,0 +1,329 @@
+body {
+    font-family: "Manrope", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0;
+}
+
+.home-page-online-enroll-image {
+    position: relative;
+    width: 100%;
+    height: auto;
+    max-height: 743.36px;
+    text-align: center;
+}
+
+.home-page-online-enroll-image img {
+    width: 100%;
+    height: auto;
+}
+
+.fitness-courses {
+    position: absolute;
+    top: 40%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    text-align: right;
+}
+
+.image-text {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 3vw;
+    font-weight: bold;
+    white-space: nowrap;
+    border-radius: 10px;
+    margin: 2.5vw 0;
+    letter-spacing: 0.15vw;
+}
+
+.enroll-button {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 0.5vw 2vw;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.6vw;
+    display: inline-block;
+    border: 0.3vw solid white;
+    border-radius: 50px;
+}
+
+.enroll-button:hover {
+    background-color: white;
+    color: #000000;
+}
+
+.shop-now,
+.calculator,
+.close-by-gym {
+    background-color: #5fc90d;
+    height: 66px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.shop-now-text,
+.calculator-text,
+.close-by-gym-text {
+    font-weight: bold;
+    font-size: 32px;
+}
+
+.shop {
+    display: flex;
+    justify-content: space-evenly;
+    height: 500px;
+    align-items: center;
+}
+
+.black-circle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.shop img {
+    margin-bottom: 10px;
+    width: 200px;
+}
+
+.shop p {
+    color: black;
+    font-weight: bold;
+    font-size: 38px;
+    margin: 10px;
+}
+
+.products-grid-wear,
+.products-grid-equipment,
+.products-grid-supplements {
+    display: flex;
+    grid-template-columns: repeat(3, 17.5%);
+    grid-column-gap: 10%;
+    grid-row-gap: 40px;
+    justify-content: center;
+    margin-bottom: 100px;
+}
+
+.product-container-wear,
+.product-container-equipment,
+.product-container-supplements {
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+}
+
+.product-image-wear,
+.product-image-equipment,
+.product-image-supplements {
+    width: 100%;
+    border-radius: 20px;
+}
+
+.product-title-wear,
+.product-title-equipment,
+.product-title-supplements {
+    padding: 10px 30px 5px;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.product-description-wear,
+.product-description-equipment,
+.product-description-supplements {
+    padding: 0px 30px 10px;
+    font-size: 16px;
+}
+
+.product-colors-wear,
+.product-colors-equipment,
+.product-colors-supplements {
+    padding: 10px 30px 10px;
+}
+
+.product-price-wear,
+.product-price-equipment,
+.product-price-supplements {
+    font-size: 20px;
+    color: black;
+    font-weight: bold;
+    padding: 10px 30px 20px;
+}
+
+.product-old-price-wear,
+.product-old-price-equipment,
+.product-old-price-supplements {
+    color: red;
+    text-decoration: line-through;
+    font-style: italic;
+}
+
+.product-details-link {
+    text-decoration: none;
+    color: black;
+}
+
+.shop-see-more-button {
+    margin-top: 1%;
+    margin-bottom: 6%;
+    margin-left: 43.5%;
+    background-color: white;
+    padding: 20px 60px;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 25px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border: none;
+    cursor: pointer;
+}
+
+.shop-see-more-button a:visited {
+    color: black;
+}
+
+.calculator-calorie {
+    height: 500px;
+    background-color: #000000;
+    text-align: center;
+}
+
+.gender-selection {
+    justify-content: center;
+    margin-bottom: 20px;
+    color: white;
+    display: flex;
+}
+
+.gender-selection label {
+    cursor: pointer;
+    background-color: #CEFCA9;
+    color: black;
+    margin: 50px 10px 0px;
+    padding: 20px 40px;
+    border-radius: 15px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+input[type="radio"] {
+    visibility: hidden;
+}
+
+input[type="radio"]:checked+label {
+    color: white;
+    background-color: #5FC90D;
+}
+
+.user-input input {
+    width: 15%;
+    padding: 20px 40px;
+    margin: 10px 10px 0px;
+    border-radius: 15px;
+    font-size: 24px;
+}
+
+.calculator-calorie .dropdowns select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 20%;
+    padding: 20px 40px;
+    margin: 30px 10px 0;
+    border-radius: 15px;
+    font-size: 24px;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%235fc90d%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E');
+    background-repeat: no-repeat, repeat;
+    background-position: right .7em top 50%, 0 0;
+    background-size: .65em auto, 100%;
+}
+
+.calculate-button {
+    margin-top: 50px;
+    bottom: 70px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 80px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 35px;
+    width: 250px;
+    height: 70px;
+    border: 5px solid white;
+    cursor: pointer;
+}
+
+.calculate-button:hover {
+    background-color: white;
+    color: #000000;
+}
+
+.gym-map {
+    height: 500px;
+    background-color: #fafafa;
+    display: flex;
+    justify-content: center;
+}
+
+.map {
+    margin: 0 5% 0 5%;
+    width: 33vw;
+}
+
+.gym-map p {
+    font-size: 2vw;
+    font-weight: bold;
+    padding-top: 20px;
+}
+
+.gym-map .dropdowns {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.gym-map .dropdowns select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    height: 40px;
+    margin: 20px 0 8px;
+    padding: 4px 30px;
+    border-radius: 15px;
+    outline: none;
+    font-size: 20px;
+    border-color: #5fc90d;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%235fc90d%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E');
+    background-repeat: no-repeat, repeat;
+    background-position: right .7em top 50%, 0 0;
+    background-size: .65em auto, 100%;
+}
+
+.find-button {
+    width: 100%;
+    height: 40px;
+    margin-top: 40px;
+    border-radius: 15px;
+    font-size: 22px;
+    font-weight: bold;
+    background-color: #5fc90d;
+    border: none;
+    color: white;
+}
+
+.scroll-top {
+    margin-left: 10%;
+    display: flex;
+    align-items: end;
+    margin-bottom: 3vw;
+}
+
+a {
+    text-decoration: none;
+}
+

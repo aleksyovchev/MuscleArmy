@@ -1,0 +1,16 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block page_content %}
+
+    <div class="add-article-line"></div>
+
+    <div class="article-add-container">
+        <h1>Add article</h1>
+        <form action="{% url 'add article' %}" method="post" class="article-add">
+            {{ form.as_p }}
+            <button class="article-add-btn" type="submit">Add</button>
+            {% csrf_token %}
+        </form>
+    </div>
+
+{% endblock %}

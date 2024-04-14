@@ -1,0 +1,122 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block page_content %}
+
+    <div class="shop-line"></div>
+
+    <div class="shop">
+        <a href="#"
+           onclick="changeImage('/static/images/Clothing-gray.svg', 'circle1', 'productSectionWear', 'productSectionGridWear')">
+            <div class="black-circle" id="circle1">
+                <img src="{% static 'images/Clothing.svg' %}" alt="Clothes"
+                     data-default-src="{% static 'images/Clothing.svg' %}">
+                <p>CLOTHING</p>
+            </div>
+
+        </a>
+        <a href="#"
+           onclick="changeImage('/static/images/Dumbell-gray.svg', 'circle2', 'productSectionEquipment', 'productSectionGridEquipment')">
+            <div class="black-circle" id="circle2">
+                <img src="{% static 'images/Dumbbell.svg' %}" alt="Equipment"
+                     data-default-src="{% static 'images/Dumbbell.svg' %}">
+                <p>EQUIPMENT</p>
+            </div>
+        </a>
+        <a href="#"
+           onclick="changeImage('/static/images/Supplements-gray.svg', 'circle3', 'productSectionSupplements', 'productSectionGridSupplements')">
+            <div class="black-circle" id="circle3">
+                <img src="{% static 'images/Supplements.svg' %}" alt="Supplements"
+                     data-default-src="{% static 'images/Supplements.svg' %}">
+                <p>SUPPLEMENTS</p>
+            </div>
+        </a>
+    </div>
+
+    <div class="products-wear" id="productSectionWear" style="display: block;">
+        <div class="products-grid-wear" id="productSectionGridWear" style="display: grid;">
+            {% for product in products %}
+                {% if product.type == "Clothes" %}
+                    <div class="product-container-wear">
+                        <a href="{% url 'details product' product_slug=product.slug %}" class="product-details-link">
+                            <img src="{{ product.product_photo }}" alt="Product Image"
+                                 class="product-image-wear">
+                            <div class="product-title-wear">{{ product.name }}</div>
+                        </a>
+                        <div class="product-description-wear">{{ product.description }}</div>
+                        <div class="product-colors-wear">
+                            <span><img src="{% static 'images/wear-variety-1.svg' %}" alt="Red"></span> <span>
+                                    <img src="{% static 'images/wear-variety-2.svg' %}" alt="Blue"></span> <span>
+                                    <img src="{% static 'images/wear-variety-3.svg' %}" alt="Pink"></span>
+                        </div>
+                        <div class="product-price-wear">${{ product.price }}
+                            {% if product.old_price != None %}
+                                <span class="product-old-price-wear">${{ product.old_price }}</span>
+                            {% endif %}
+                        </div>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+        <button class="shop-see-more-button">See more...</button>
+    </div>
+
+    <div class="products-equipment" id="productSectionEquipment" style="display: none;">
+        <div class="products-grid-equipment" id="productSectionGridEquipment" style="display: none;">
+            {% for product in products %}
+                {% if product.type == "Equipment" %}
+                    <div class="product-container-wear">
+                        <a href="{% url 'details product' product_slug=product.slug %}"" class="product-details-link">
+                            <img src="{{ product.product_photo }}" alt="Product Image"
+                                 class="product-image-wear">
+                            <div class="product-title-wear">{{ product.name }}</div>
+                        </a>
+                        <div class="product-description-wear">{{ product.description }}</div>
+                        <div class="product-colors-wear">
+                            <span><img src="{% static 'images/wear-variety-1.svg' %}" alt="Red"></span> <span>
+                                    <img src="{% static 'images/wear-variety-2.svg' %}" alt="Blue"></span> <span>
+                                    <img src="{% static 'images/wear-variety-3.svg' %}" alt="Pink"></span>
+                        </div>
+                        <div class="product-price-wear">${{ product.price }}
+                            {% if product.old_price != None %}
+                                <span class="product-old-price-wear">${{ product.old_price }}</span>
+                            {% endif %}
+                        </div>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+        <button class="shop-see-more-button">See more...</button>
+    </div>
+
+    <div class="products-supplements" id="productSectionSupplements" style="display: none;">
+        <div class="products-grid-supplements" id="productSectionGridSupplements" style="display: none;">
+            {% for product in products %}
+                {% if product.type == "Supplements" %}
+                    <div class="product-container-wear">
+                        <a href="{% url 'details product' product_slug=product.slug %}"" class="product-details-link">
+                            <img src="{{ product.product_photo }}" alt="Product Image"
+                                 class="product-image-wear">
+                            <div class="product-title-wear">{{ product.name }}</div>
+                        </a>
+                        <div class="product-description-wear">{{ product.description }}</div>
+                        <div class="product-colors-wear">
+                            <span><img src="{% static 'images/wear-variety-1.svg' %}" alt="Red"></span> <span>
+                                    <img src="{% static 'images/wear-variety-2.svg' %}" alt="Blue"></span> <span>
+                                    <img src="{% static 'images/wear-variety-3.svg' %}" alt="Pink"></span>
+                        </div>
+                        <div class="product-price-wear">${{ product.price }}
+                            {% if product.old_price != None %}
+                                <span class="product-old-price-wear">${{ product.old_price }}</span>
+                            {% endif %}
+                        </div>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+        <button class="shop-see-more-button">See more...</button>
+    </div>
+
+{#    <script src="{% static 'js/button-scroll-home-page.js' %}"></script>#}
+    <script src="{% static 'js/shop-extend.js' %}"></script>
+
+{% endblock %}

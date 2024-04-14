@@ -1,0 +1,33 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block page_content %}
+
+    <div class="blog-line"></div>
+
+    <div class="blog">
+        {% for article in articles %}
+            <div class="article">
+                <div>
+                    <img src="{{ article.article_photo }}" alt="Article Image">
+                </div>
+
+                <div class="text">
+                    <a href="{% url 'details article' article_slug=article.slug %}">
+                        <h2>{{ article.title }}</h2>
+                    </a>
+                    <p>{{ article.description }}</p>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
+    {% if request.user.is_authenticated %}
+        <div class="blog-buttons">
+            <a href="{% url 'add article' %}">
+                <button class="add-article-button">Add article</button>
+            </a>
+        </div>
+    {% else %}
+    {% endif %}
+
+{% endblock %}

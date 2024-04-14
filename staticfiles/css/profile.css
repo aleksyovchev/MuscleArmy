@@ -1,0 +1,161 @@
+.profile-line {
+    background-color: #e2e2e2;
+    height: 1px;
+}
+
+.profile-picture-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 12.5vw;
+    align-items: start;
+    margin: 80px 0;
+}
+
+.picture-and-info {
+    display: flex;
+}
+
+.image-and-upload {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-picture {
+    width: 9vw;
+    height: 9vw;
+    border-radius: 50%;
+    border: 0.23vw solid #5fc90d;
+    padding: 0.23vw;
+    object-fit: cover;
+}
+
+.upload-overlay {
+    position: absolute;
+    width: 9vw;
+    height: 9vw;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.upload-icon {
+    color: white;
+    font-size: 60px;
+    cursor: pointer;
+}
+
+.name-container {
+    margin-left: 4vw;
+}
+
+.name-container h1 {
+    font-size: 2.5vw;
+    margin: 0;
+}
+
+.name-container p {
+    font-size: 1.5vw;
+    color: #8c8c8c;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+.logout-button {
+    width: auto;
+    height: auto;
+    border-radius: 40px;
+    outline: none;
+    font-size: 1.3vw;
+    font-weight: bold;
+    background-color: #5fc90d;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 0.5vw 3vw;
+}
+
+.profile-container {
+    display: block;
+    margin: 40px 0 50px;
+    padding: 0 12.5vw;;
+}
+
+.tabs-container {
+    display: flex;
+    justify-content: center;
+}
+
+#personalButton,
+#favoritesButton,
+#ordersButton,
+#coursesButton,
+#muscleButton {
+    width: 14.25vw;
+    border-radius: 25px 25px 0 0;
+    outline: none;
+    font-size: 22px;
+    font-weight: bold;
+    background-color: #dbdbdb;
+    color: #ffffff;
+    cursor: pointer;
+    border: none;
+    padding: 4px ;
+    margin-right: 10px;
+    height: 50px;
+}
+
+#muscleButton {
+    margin-right: 0;
+}
+
+.personal-info {
+    border-top: 5px solid #5fc90d;
+}
+
+.personal-info {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    height: 350px;
+}
+
+.personal-info-texts {
+    display: flex;
+    margin-right: 10%;
+}
+
+.column-1,
+.column-2 {
+    width: 550px;
+    margin-right: 5%;
+}
+
+.personal-info p{
+    width: 90%;
+    padding: 20px;
+    margin: 20px 50px 10px 10px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 1px 1px 0 1px rgba(0, 0, 0, 0.13);
+    font-size: 20px;
+}
+
+.save-changes-button,
+.delete-user-button {
+    width: 100%;
+    margin: 20px;
+    height: 50px;
+    border-radius: 30px;
+    outline: none;
+    font-size: 22px;
+    font-weight: bold;
+    background-color: #5fc90d;
+    border: none;
+    color: white;
+    cursor: pointer;
+}

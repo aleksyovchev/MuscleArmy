@@ -1,0 +1,37 @@
+{% extends 'base/base.html' %}
+{% load placeholders %}
+{% load static %}
+{% block page_content %}
+
+        <div class="profile-line">
+        </div>
+
+        <div class="register">
+            <h1>Register</h1>
+    
+            <form action="{% url 'register user' %}" method="post">
+               {{ form.username|placeholder:'Username' }}
+               {{ form.email|placeholder:'Email' }}
+               {{ form.password1|placeholder:'Password' }}
+               {{ form.password2|placeholder:'Repeat Password' }}
+                <div class="register-options">
+                    <div class="option">
+                        <input type="checkbox" name="terms-and-conditions" id="terms-and-conditions" class="custom-checkbox">
+                        <label for="terms-and-conditions">I agree to the Terms and Conditions</label>
+                    </div>
+                    <div class="option">
+                        <input type="checkbox" name="news" id="news" class="custom-checkbox">
+                        <label for="news">I agree to receive new information via Email</label>
+                    </div>
+                </div>            
+    
+                <button type="submit">Register now</button>
+                {% csrf_token %}
+            </form>
+    
+            <div class="login-link">
+                <p>You have an account? <a href="{% url 'login user' %}">Log In</a></p>
+            </div>
+        </div>
+
+{% endblock %}

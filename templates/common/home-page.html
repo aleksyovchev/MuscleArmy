@@ -1,0 +1,218 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block page_content %}
+
+    <div class="home-page-online-enroll-image">
+        <img src="{% static 'images/male-photo.svg' %}" alt="Male Photo">
+        <div class="fitness-courses">
+            <p class="image-text">ONLINE FITNESS COURSES</p>
+            <a href="{% url 'courses' %}" class="enroll-button">Enroll now</a>
+        </div>
+    </div>
+
+    <div id="shop-now-section" class="shop-now">
+        <p class="shop-now-text">SHOP NOW</p>
+    </div>
+
+    <div class="shop">
+        <a href="#"
+           onclick="changeImage('static/images/Clothing-gray.svg', 'circle1', 'productSectionWear', 'productSectionGridWear')">
+            <div class="black-circle" id="circle1">
+                <img src="{% static 'images/Clothing.svg' %}" alt="Clothes"
+                     data-default-src="{% static 'images/Clothing.svg' %}">
+                <p>CLOTHING</p>
+            </div>
+
+        </a>
+        <a href="#"
+           onclick="changeImage('static/images/Dumbell-gray.svg', 'circle2', 'productSectionEquipment', 'productSectionGridEquipment')">
+            <div class="black-circle" id="circle2">
+                <img src="{% static 'images/Dumbbell.svg' %}" alt="Equipment"
+                     data-default-src="{% static 'images/Dumbbell.svg' %}">
+                <p>EQUIPMENT</p>
+            </div>
+        </a>
+        <a href="#"
+           onclick="changeImage('static/images/Supplements-gray.svg', 'circle3', 'productSectionSupplements', 'productSectionGridSupplements')">
+            <div class="black-circle" id="circle3">
+                <img src="{% static 'images/Supplements.svg' %}" alt="Supplements"
+                     data-default-src="{% static 'images/Supplements.svg' %}">
+                <p>SUPPLEMENTS</p>
+            </div>
+        </a>
+    </div>
+
+    <div class="products-wear" id="productSectionWear" style="display: none;">
+        <div class="products-grid-wear" id="productSectionGridWear" style="display: none;">
+            {% for product in products %}
+                {% if product.type == "Clothes" %}
+                    {% if forloop.counter <= 6 %}
+                        <div class="product-container-wear">
+                        <a href="{% url 'details product' product_slug=product.slug %}" class="product-details-link">
+                            <img src="{{ product.product_photo }}" alt="Product Image"
+                                 class="product-image-wear">
+                            <div class="product-title-wear">{{ product.name }}</div>
+                        </a>
+                        <div class="product-description-wear">{{ product.description }}</div>
+                        <div class="product-colors-wear">
+                            <span><img src="{% static 'images/wear-variety-1.svg' %}" alt="Red"></span> <span>
+                                    <img src="{% static 'images/wear-variety-2.svg' %}" alt="Blue"></span> <span>
+                                    <img src="{% static 'images/wear-variety-3.svg' %}" alt="Pink"></span>
+                        </div>
+                        <div class="product-price-wear">${{ product.price }}
+                            {% if product.old_price != None %}
+                                <span class="product-old-price-wear">${{ product.old_price }}</span>
+                            {% endif %}
+                        </div>
+                    </div>
+                    {% endif %}
+                {% endif %}
+            {% endfor %}
+        </div>
+        <a href="{% url 'shop' %}">
+            <button class="shop-see-more-button">See more...</button>
+        </a>
+    </div>
+
+    <div class="products-equipment" id="productSectionEquipment" style="display: none;">
+        <div class="products-grid-equipment" id="productSectionGridEquipment" style="display: none;">
+            {% for product in products %}
+                {% if product.type == "Equipment" %}
+                    {% if forloop.counter <= 6 %}
+                        <div class="product-container-equipment">
+                        <a href="{% url 'details product' product_slug=product.slug %}" class="product-details-link">
+                            <img src="{{ product.product_photo }}" alt="Product Image"
+                                 class="product-image-equipment">
+                            <div class="product-title-equipment">{{ product.name }}</div>
+                        </a>
+                        <div class="product-description-equipment">{{ product.description }}</div>
+                        <div class="product-colors-equipment">
+                            <span><img src="{% static 'images/wear-variety-1.svg' %}" alt="Red"></span> <span><img
+                                src="{% static 'images/wear-variety-2.svg' %}" alt="Blue"></span> <span><img
+                                src="{% static 'images/wear-variety-3.svg' %}" alt="Pink"></span>
+                        </div>
+                        <div class="product-price-equipment">${{ product.price }}
+                            {% if product.old_price != None %}
+                                <span class="product-old-price-equipment">${{ product.old_price }}</span>
+                            {% endif %}
+                        </div>
+                    </div>
+                    {% endif %}
+                {% endif %}
+            {% endfor %}
+        </div>
+        <a href="{% url 'shop' %}">
+            <button class="shop-see-more-button">See more...</button>
+        </a>
+    </div>
+
+    <div class="products-supplements" id="productSectionSupplements" style="display: none;">
+        <div class="products-grid-supplements" id="productSectionGridSupplements" style="display: none;">
+            {% for product in products %}
+                {% if product.type == "Supplements" %}
+                    {% if forloop.counter <= 6 %}
+                        <div class="product-container-supplements">
+                        <a href="{% url 'details product' product_slug=product.slug %}" class="product-details-link">
+                            <img src="{{ product.product_photo }}" alt="Product Image"
+                                 class="product-image-supplements">
+                            <div class="product-title-supplements">{{ product.name }}</div>
+                        </a>
+                        <div class="product-description-supplements">{{ product.description }}</div>
+                        <div class="product-colors-supplements">
+                            <span><img src="{% static 'images/wear-variety-1.svg' %}" alt="Red"></span> <span><img
+                                src="{% static 'images/wear-variety-2.svg' %}" alt="Blue"></span> <span><img
+                                src="{% static 'images/wear-variety-3.svg' %}" alt="Pink"></span>
+                        </div>
+                        <div class="product-price-supplements">${{ product.price }}
+                            {% if product.old_price != None %}
+                                <span class="product-old-price-supplements">${{ product.old_price }}</span>
+                            {% endif %}
+                        </div>
+                    </div>
+                    {% endif %}
+                {% endif %}
+            {% endfor %}
+        </div>
+        <a href="{% url 'shop' %}">
+            <button class="shop-see-more-button">See more...</button>
+        </a>
+    </div>
+
+
+    <div id="calculator-section" class="calculator">
+        <p class="calculator-text">CALORIE CALCULATOR</p>
+    </div>
+
+    <div class="calculator-calorie">
+        <div class="gender-selection">
+            <input type="radio" id="male" name="gender" value="male" checked>
+            <label for="male">MALE</label>
+
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">FEMALE</label>
+        </div>
+        <div class="user-input">
+            <input type="text" placeholder="Age">
+            <input type="text" placeholder="Weight">
+            <input type="text" placeholder="Height">
+        </div>
+        <div class="dropdowns">
+            <select>
+                <option value="" disabled selected hidden>Goal</option>
+                <option value="weight-loss">Weight Loss</option>
+                <option value="muscle-gain">Muscle Gain</option>
+                <option value="maintenance">Maintenance</option>
+            </select>
+            <select>
+                <option value="" disabled selected hidden>Activity Level</option>
+                <option value="sedentary">Sedentary</option>
+                <option value="lightly-active">Lightly Active</option>
+                <option value="moderately-active">Moderately Active</option>
+                <option value="very-active">Very Active</option>
+            </select>
+        </div>
+        <button class="calculate-button">Calculate</button>
+    </div>
+
+    <div id="close-by-gym-section" class="close-by-gym">
+        <p class="close-by-gym-text">CLOSE-BY GYM</p>
+    </div>
+
+    <div class="gym-map">
+        <img class="map" src="{% static 'images/map.svg' %}" alt="Map">
+
+        <div class="gym-fields">
+            <p class="gym-map-title">FIND THE CLOSES ONE</p>
+
+            <div class="dropdowns">
+                <select>
+                    <option value="" disabled selected hidden>Country</option>
+                    <option value="bulgaria">Bulgaria</option>
+                    <option value="romania">Romania</option>
+                    <option value="greece">Greece</option>
+                </select>
+                <select>
+                    <option value="" disabled selected hidden>City</option>
+                    <option value="sofia">Sofia</option>
+                    <option value="athens">Athens</option>
+                    <option value="bucharest">Bucharest</option>
+                </select>
+                <select>
+                    <option value="" disabled selected hidden>Specific location</option>
+                    <option value="lyulin">Lyulin</option>
+                    <option value="titan">Titan</option>
+                    <option value="kolonaki">Kolonaki</option>
+                </select>
+                <button class="find-button">Search location</button>
+            </div>
+        </div>
+
+        <a class="scroll-top" href="#top">
+            <img class="upward-arrow" src="{% static 'images/upward-arrow.svg' %}" alt="Upward Arrow">
+        </a>
+    </div>
+
+    <script src="{% static 'js/shop-extend.js' %}"></script>
+    <script src="{% static 'js/scroll-subnav-bar.js' %}"></script>
+
+{% endblock %}

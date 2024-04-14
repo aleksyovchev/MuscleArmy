@@ -1,0 +1,96 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block page_content %}
+
+        <div class="profile-line">
+        </div>
+        
+        <div class="profile-picture-container">
+            <div class="picture-and-info">
+                <div class="image-and-upload" id="imageUpload">
+                    <img src="static/images/blank-profile-picture-image-holder-with-a-crown-vector-42411540.jpg"
+                    alt="Профилна снимка" class="profile-picture" id="profilePicture">
+                    <div class="upload-overlay" id="uploadOverlay">
+                        <label for="fileInput" class="upload-icon">+</label>
+                        <input type="file" id="fileInput" accept="image/*" style="display: none">
+                    </div>
+                </div>
+                <div class="name-container" id="nameContainer">
+                    <h1>{{ object.username }}</h1>
+                    <p>Description...</p>
+                </div>
+            </div>
+            {% if is_owner %}
+                <form method="post" action="{% url 'logout user' %}">
+                    <button class="logout-button">Log out</button>
+                    {% csrf_token %}
+                </form>
+            {% endif %}
+        </div>
+        
+        <div class="profile-container">
+            <div class="tabs-container">
+                <button class="personal-button" id="personalButton" onclick="changeTab(this.id)"
+                    style="background-color: #5fc90d; color: white;">Personal</button>
+                <button class="favorites-button" id="favoritesButton" onclick="changeTab(this.id)">Favorites</button>
+                <button class="orders-button" id="ordersButton" onclick="changeTab(this.id)">Orders</button>
+                <button class="courses-button" id="coursesButton" onclick="changeTab(this.id)">Courses</button>
+                <button class="muscle-club-button" id="muscleButton" onclick="changeTab(this.id)">Muscle Club</button>
+                <div class="menu-line"></div>
+            </div>
+
+            <div class="info-containers">
+                <div class="personal-info" id="personalInfo">
+                    <div class="personal-info-texts">
+                            <div class="column-1">
+                                {% if object.first_name %}
+                                    <p class="first-column">{{ object.first_name }}</p>
+                                {% else %}
+                                    <p class="first-column">Name</p>
+                                {% endif %}
+                                <p class="first-column">{{ object.email }}</p>
+                            </div>
+                        <div class="column-2">
+                            {% if object.last_name %}
+                                <p class="second-column">{{ object.last_name }}</p>
+                            {% else %}
+                                <p class="second-column">Surname</p>
+                            {% endif %}
+                            {% if object.gender %}
+                                <p class="second-column">{{ object.gender }}</p>
+                            {% else %}
+                                <p class="second-column">Gender</p>
+                            {% endif %}
+                        </div>
+                    </div>
+                    {% if is_owner %}
+                        <div class="profile-buttons">
+                            <a href="{% url 'edit user' pk=object.pk %}">
+                               <button class="save-changes-button">Edit Profile</button>
+                            </a>
+                            <a href="{% url 'delete user' pk=object.pk %}">
+                               <button class="delete-user-button">Delete Profile</button>
+                            </a>
+                        </div>
+                    {% endif %}
+                <div class="favorites-info" id="favoritesInfo" style="display: none;">
+                    <h1>AS2D</h1>
+                </div>
+                <div class="orders-info" id="ordersInfo" style="display: none;">
+                    <h1>A3SD</h1>
+                </div>
+                <div class="courses-info" id="coursesInfo" style="display: none;">
+                    <h1>AS4D</h1>
+                </div>
+                <div class="muscle-club-info" id="muscleInfo" style="display: none;">
+                    <h1>AS5D</h1>
+                </div>
+            </div>
+        </div>
+
+    <script src="js/burger-menu.js"></script>
+    <script src="js/button-scroll-home-page.js"></script>
+    <script src="js/upload-profile-pic.js"></script>
+    <script src="js/personal-info-buttons.js"></script>
+
+{% endblock %}
