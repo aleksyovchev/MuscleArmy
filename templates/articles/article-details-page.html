@@ -23,8 +23,9 @@
     {% for comment in comments %}
         <div class="comment" id="comment-{{ comment.pk }}">
             <div class="comment-header">
-                <span><img
-                        src="{% static 'images/blank-profile-picture-image-holder-with-a-crown-vector-42411540.jpg' %}"></span>
+                <span>
+                    <img src="{% static 'images/blank-profile-picture-image-holder-with-a-crown-vector-42411540.jpg' %}">
+                </span>
                 <span class="comment-author">John Doe</span>
                 <span class="comment-date">{{ comment.publication_date_and_time }}</span>
             </div>

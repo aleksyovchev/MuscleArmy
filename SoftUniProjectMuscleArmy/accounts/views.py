@@ -19,7 +19,6 @@ class SingUpView(views.CreateView):
 
 
 class SignOutView(auth_views.LogoutView):
-    print('asd')
     next_page = reverse_lazy('index')
 
 

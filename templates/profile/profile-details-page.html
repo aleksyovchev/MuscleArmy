@@ -8,8 +8,8 @@
         <div class="profile-picture-container">
             <div class="picture-and-info">
                 <div class="image-and-upload" id="imageUpload">
-                    <img src="static/images/blank-profile-picture-image-holder-with-a-crown-vector-42411540.jpg"
-                    alt="Профилна снимка" class="profile-picture" id="profilePicture">
+                    <img src="{% static 'images/blank-profile-picture-image-holder-with-a-crown-vector-42411540.jpg' %}"
+                    alt="Profile picture" class="profile-picture" id="profilePicture">
                     <div class="upload-overlay" id="uploadOverlay">
                         <label for="fileInput" class="upload-icon">+</label>
                         <input type="file" id="fileInput" accept="image/*" style="display: none">
@@ -88,9 +88,7 @@
             </div>
         </div>
 
-    <script src="js/burger-menu.js"></script>
-    <script src="js/button-scroll-home-page.js"></script>
-    <script src="js/upload-profile-pic.js"></script>
-    <script src="js/personal-info-buttons.js"></script>
+    <script src="{% static 'js/upload-profile-pic.js' %}"></script>
+    <script src="{% static 'js/personal-info-buttons.js' %}"></script>
 
 {% endblock %}
