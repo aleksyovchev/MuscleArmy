@@ -26,7 +26,6 @@
                 </select>
             </div>
             <button class="order-button">Order now</button>
-            <img id="productLikeButton" class="product-like-button" src="{% static 'images/unfilled-heart.svg' %}" alt="Like">
         </div>
 
         <img src="{% static 'images/green-arrow-carousel.svg' %}" alt="Prevoius image" class="carousel-btn-prev" id="prevBtn">
@@ -47,7 +46,7 @@
 
 
         <div class="more-products-details">
-            {% for random_product in random_products %} }
+            {% for random_product in random_products %}
                 <div class="more-products-details-container">
                     <a href="{% url 'details product' product_slug=random_product.slug %}" class="more-products-details-link">
                         <img src="{{ random_product.product_photo }}" alt="Product Image" class="more-products-details-image">
@@ -63,7 +62,9 @@
                 </div>
             {% endfor %}
         </div>
-        <button class="more-see-more-button">See more...</button>
+        <a href="{% url 'shop' %}">
+            <button class="more-see-more-button">See more...</button>
+        </a>
 
     <script src="{% static 'js/button-scroll-home-page.js' %}"></script>
     <script src="{% static 'js/caroussel-slideshow.js' %}"></script>

@@ -5,10 +5,8 @@
 
 .delete-article-container {
     width: 850px;
-    margin: 0 auto;
+    margin: 4.55% auto 6.5%;
     padding: 40px;
-    margin-top: 4.55%;
-    margin-bottom: 6.5%;
     border-radius: 30px;
     box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3);
     display: flex;

@@ -4,7 +4,7 @@ from django.core import validators
 from django.db import models
 from django.contrib.auth import models as auth_models
 
-from SoftUniProjectMuscleArmy.core.validators import validate_only_letters
+from SoftUniProjectMuscleArmy.core.validators import validate_only_letters, validate_file_less_than_5mb
 
 
 class ChoicesEnumMixin:
@@ -32,7 +32,9 @@ class AppUser(auth_models.AbstractUser):
         validators=(
             validators.MinLengthValidator(MIN_LEN_FIRST_LAST_NAME),
             validate_only_letters,
-        )
+        ),
+        null=True,
+        blank=True,
     )
 
     last_name = models.CharField(
@@ -40,7 +42,9 @@ class AppUser(auth_models.AbstractUser):
         validators=(
             validators.MinLengthValidator(MIN_LEN_FIRST_LAST_NAME),
             validate_only_letters,
-        )
+        ),
+        null=True,
+        blank=True,
     )
 
     email = models.EmailField(
@@ -49,6 +53,15 @@ class AppUser(auth_models.AbstractUser):
 
     gender = models.CharField(
         choices=Gender.choices(),
-        max_length=Gender.max_len()
+        max_length=Gender.max_len(),
+        null=True,
+        blank=True,
+    )
+
+    profile_picture = models.ImageField(
+        upload_to='mediafiles/profile_pictures/',
+        null=True,
+        blank=True,
+        validators=(validate_file_less_than_5mb,)
     )
 

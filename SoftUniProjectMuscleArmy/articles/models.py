@@ -33,7 +33,7 @@ class Article(StrFromFieldsMixin, models.Model):
 
     author = models.ForeignKey(
         settings.AUTH_USER_MODEL,
-        on_delete=models.RESTRICT,
+        on_delete=models.CASCADE,
         null=False,
         blank=False,
     )
@@ -54,11 +54,6 @@ class Article(StrFromFieldsMixin, models.Model):
         null=False,
         blank=True,
     )
-
-    # user = models.ForeignKey(
-    #     UserModel,
-    #     on_delete=models.RESTRICT,
-    # )
 
     def save(self, *args, **kwargs):
         super().save(*args, **kwargs)

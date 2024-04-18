@@ -26,7 +26,7 @@
                 <span>
                     <img src="{% static 'images/blank-profile-picture-image-holder-with-a-crown-vector-42411540.jpg' %}">
                 </span>
-                <span class="comment-author">John Doe</span>
+                <span class="comment-author">{{ comment.user.username }}</span>
                 <span class="comment-date">{{ comment.publication_date_and_time }}</span>
             </div>
             <div class="comment-body">

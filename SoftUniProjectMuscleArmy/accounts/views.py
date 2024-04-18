@@ -49,3 +49,15 @@ class DeleteUserView(views.DeleteView):
     template_name = 'profile/profile-delete-page.html'
     model = UserModel
     success_url = reverse_lazy('index')
+
+
+# def upload_profile_picture(request):
+#     if request.method == 'POST':
+#         profile_picture = request.FILES['profile_picture']
+#
+#         user = request.user
+#         user.profile_picture = profile_picture
+#         user.save()
+#
+#         return render(request, 'profile/profile-details-page.html')
+
